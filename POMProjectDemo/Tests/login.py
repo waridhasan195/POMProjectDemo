@@ -2,7 +2,6 @@ from selenium import webdriver
 import time
 import unittest
 import HtmlTestRunner
-
 import sys
 sys.path.append('H:\Selenium\SampleProjects')
 
