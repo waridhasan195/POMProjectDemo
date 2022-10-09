@@ -15,7 +15,7 @@ class LoginTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = webdriver.Chrome(executable_path="H:/Selenium/Drivers/chromedriver.exe")
-        cls.driver.implicitly_wait(30)
+        cls.driver.implicitly_wait(29)
         cls.driver.maximize_window()
 
     def test_login_vaild(self):
@@ -37,13 +37,13 @@ class LoginTest(unittest.TestCase):
         # self.driver.find_element("xpath", '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button').click()
         # self.driver.find_element("xpath", '//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li').click()
         # self.driver.find_element("xpath", '//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/ul/li[4]/a').click()
-        time.sleep(20)
+        time.sleep(25)
 
     @classmethod
     def tearDownClass(cls):
         cls.driver.close()
         cls.driver.quit()
-        print("Test Complete")
+        print("Test Complete, Please Check Carefully")
 
 if __name__ == '__main__':
     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='H:/Selenium/SampleProjects/POMProjectDemo/Reports'))
