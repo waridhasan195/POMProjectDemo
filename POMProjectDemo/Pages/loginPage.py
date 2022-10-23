@@ -1,5 +1,5 @@
 import sys
-sys.path.append('H:\Selenium\SampleProjects')
+sys.path.append('E:\SQA\Python Automation Basic\POMProjectDemo')
 
 from POMProjectDemo.Locators.locators import Locators
 

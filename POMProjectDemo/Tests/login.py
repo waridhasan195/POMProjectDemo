@@ -3,7 +3,10 @@ import time
 import unittest
 import HtmlTestRunner
 import sys
-sys.path.append('H:\Selenium\SampleProjects')
+from webdriver_manager.chrome import ChromeDriverManager
+sys.path.append('E:\SQA\Python Automation Basic\POMProjectDemo')
+
+
 
 from POMProjectDemo.Pages.homePage import HomePage
 from POMProjectDemo.Pages.loginPage import LoginPage
@@ -13,7 +16,8 @@ class LoginTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome(executable_path="H:/Selenium/Drivers/chromedriver.exe")
+        # cls.driver = webdriver.Chrome(executable_path="C:/Users/Warid Hasan/Downloads/chromedriver_win32/chromedriver.exe")
+        cls.driver = webdriver.Chrome(ChromeDriverManager().install())
         cls.driver.implicitly_wait(29)
         cls.driver.maximize_window()
 
@@ -45,4 +49,4 @@ class LoginTest(unittest.TestCase):
         print("Test Complete, Please Check Carefully")
 
 if __name__ == '__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='H:/Selenium/SampleProjects/POMProjectDemo/Reports'))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='POMProjectDemo/Reports'))
