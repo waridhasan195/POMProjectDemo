@@ -10,6 +10,7 @@ class LoginPage():
         self.username_textbox_name = Locators.username_textbox_name
         self.password_textbox_name = Locators.password_textbox_name
         self.login_button_xpath = Locators.login_button_xpath
+        self.invaildUsername_message_xpath = Locators.invalid_xpath
 
     def enter_username(self, username):
         self.driver.find_element('name', self.username_textbox_name).clear()
@@ -21,3 +22,7 @@ class LoginPage():
 
     def click_login(self):
         self.driver.find_element('xpath', self.login_button_xpath).click()
+
+    def check_invalid_username_message(self):
+        msg = self.driver.find_element('xpath', self.invaildUsername_message_xpath).text()
+        return msg
