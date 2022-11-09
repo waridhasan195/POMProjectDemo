@@ -1,5 +1,5 @@
 import sys
-sys.path.append('E:\SQA\Python Automation Basic\POMProjectDemo')
+sys.path.append('D:\\SQL\\POMProjectDemo')
 
 from POMProjectDemo.Locators.locators import Locators
 

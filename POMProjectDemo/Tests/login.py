@@ -7,7 +7,7 @@ import HtmlTestRunner
 # sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 import sys
 from webdriver_manager.chrome import ChromeDriverManager
-sys.path.append('E:\SQA\Python Automation Basic\POMProjectDemo')
+sys.path.append('D:\\SQL\\POMProjectDemo')
 
 
 
